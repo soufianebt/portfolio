@@ -1,0 +1,192 @@
+@import 'base';
+body{
+  background-color: $background-color;
+}
+
+.container {
+  display: flex;
+  height: inherit;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: $border-color 1px solid;
+
+}
+
+.main-container {
+  padding: 3rem;
+  display: flex;
+  flex-direction:row;
+  font-weight: normal;
+  color: $header-color;
+  &__left-side {
+    max-width: 25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: flex-start;
+    & img {
+      width: 15rem;
+      margin: 1rem auto auto;
+      border-radius: 100%;
+    }
+    & h1 {
+      width: fit-content;
+      margin: auto;
+      font-size: 2rem;
+    }
+    & nav {
+      width: fit-content;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      margin: 3rem;
+        & a {
+            border: black 1px solid;
+            margin: 5px;
+            padding: 0 4rem 0 4rem ;
+            text-decoration: none;
+            color: $header-color;
+            font-size: 1.5rem;
+            text-align: center;
+            background-color: $btn-background;
+            &:hover {
+              background-color: $btn-background-hover;
+            }
+        }
+    }
+  }
+  &__right-side {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 3rem;
+    min-width: 50%;
+  }
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 25rem 0 25rem ;
+  & h1{
+    font-size: 2rem;
+    margin:  2rem ;
+  }
+  & ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+  & button {
+    text-decoration: none;
+    color: $header-color;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    text-align: center;
+    margin: 2rem;
+    background-color: $btn-background;
+    &:hover {
+      background-color: $btn-background-hover;
+    }
+  }
+}
+
+.education {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: #282828 1px solid;
+  margin: 1rem;
+
+  &__title {
+    font-size: 2rem;
+  }
+
+  &__img {
+    width: 12rem;
+    height: 10rem;
+    margin: 2rem;
+  }
+
+  &__info {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 1rem;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  &__school {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    word-break: keep-all;
+  }
+
+  &__location {
+    font-style: italic;
+    text-align: center;
+  }
+
+  &__field {
+    text-align: center;
+  }
+
+  &__date {
+    padding: 0;
+    margin-right: 1rem;
+    word-break: keep-all;
+    text-align: right;
+  }
+}
+@media (max-width: 1050px) {
+  .education {
+    flex-direction: column;
+    &__img {
+      margin: 0 0 1rem;
+    }
+    &__school {
+      text-align: center;
+    }
+
+    &__location {
+      text-align: center;
+    }
+  }
+}
+
+.tech-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  &__image {
+    width: 7rem;
+    object-fit: contain;
+  }
+  &__name {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+.tech-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
