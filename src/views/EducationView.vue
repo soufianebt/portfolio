@@ -1,20 +1,23 @@
 <template>
 
     <div class="education__container">
-      <h1 class="education__title">Education</h1>
-      <div class="education__container__card" v-for="education in educations" :key="education.id">
-        <Education
-            :school="education.school"
-            :location="education.location"
-            :date="education.date"
-            :field="education.field"
-            :img="education.img"/>
-      </div>
+        <h1 class="education__title">Education</h1>
+        <div class="education__container__card">
+            <template v-for="education in educations" :key="education.id">
+                <Education
+                        :date="education.date"
+                        :field="education.field"
+                        :img="education.img"
+                        :location="education.location"
+                        :school="education.school"/>
+            </template>
+        </div>
     </div>
 </template>
 
 <script>
 import Education from '../components/Education.vue'
+
 export default {
   components: {
     Education
@@ -39,7 +42,7 @@ export default {
           img: ("images/Education/fsr.png")
         },
         {
-          id:3,
+          id: 3,
           school: 'Lyce Abou Bakr Errazi',
           location: 'Skhirat, Morocco',
           date: '2017',
