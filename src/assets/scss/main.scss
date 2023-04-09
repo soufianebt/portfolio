@@ -1,79 +1,140 @@
 @import 'base';
-body{
+
+body {
   background-color: $background-color;
 }
 
 .container {
   display: flex;
-  height: inherit;
+  flex-basis: 100%;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border: $border-color 1px solid;
+  padding: 1rem;
 
+  @media (min-width: 590px) {
+    &.left-side {
+      max-width: 25rem;
+    }
+  }
 }
 
 .main-container {
-  padding: 3rem;
+  padding: 1rem;
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
+  justify-content: center;
   font-weight: normal;
   color: $header-color;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+
+  @media (min-width: 320px) {
+    padding: 2rem;
+  }
+  @media (min-width: 420px) {
+    padding: 3rem;
+  }
+  @media (min-width: 590px) {
+    flex-direction: row;
+  }
+
   &__left-side {
-    max-width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-self: flex-start;
+    align-items: center;
+    width: 100%;
+
+    & .avatar-container {
+      width: 170px;
+      height: 170px;
+      border: 3px solid lighten($background-color, 5%);
+      border-radius: 50%;
+      transition: all 0.5s ease-in-out;
+      @media (min-width: 300px) {
+        width: 13rem;
+        height: 13rem;
+      }
+      @media (min-width: 320px) {
+        width: 13.75rem;
+        height: 13.75rem;
+      }
+
+      @media (min-width: 420px) {
+        width: 15.625rem;
+        height: 15.625rem;
+      }
+    }
+
     & img {
-      width: 15rem;
-      margin: 1rem auto auto;
+      //width: 15rem;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
       border-radius: 100%;
     }
+
     & h1 {
-      width: fit-content;
+      width: 100%;
+      text-align: center;
       margin: auto;
       font-size: 2rem;
     }
+
     & nav {
-      width: fit-content;
+      //width: fit-content;
       height: fit-content;
       display: flex;
       flex-direction: column;
-      margin: 3rem;
-        & a {
-            border: black 1px solid;
-            margin: 5px;
-            padding: 0 4rem 0 4rem ;
-            text-decoration: none;
-            color: $header-color;
-            font-size: 1.5rem;
-            text-align: center;
-            background-color: $btn-background;
-            &:hover {
-              background-color: $btn-background-hover;
-            }
+      gap: 10px;
+      margin-block: 3rem;
+      width: 100%;
+
+      & a {
+        display: block;
+        width: 100%;
+        border: black 1px solid;
+        //margin: 5px;
+        //padding: 0 4rem 0 4rem;
+        text-decoration: none;
+        color: $header-color;
+        font-size: 1.5rem;
+        text-align: center;
+        background-color: $btn-background;
+
+        &:hover {
+          background-color: $btn-background-hover;
         }
+      }
     }
   }
+
   &__right-side {
     height: 100%;
     width: 100%;
     display: flex;
-    padding: 3rem;
-    min-width: 50%;
+    //padding: 3rem;
+    //min-width: 50%;
   }
 }
 
-.about{
+.about {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 25rem 0 25rem ;
-  & h1{
+  //margin: 0 25rem 0 25rem;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+
+  & h1 {
     font-size: 2rem;
-    margin:  2rem ;
+    margin: 2rem;
   }
+
   & ul {
     list-style-type: none;
     padding: 0;
@@ -81,7 +142,9 @@ body{
     align-items: center;
     display: flex;
     flex-direction: column;
+
   }
+
   & button {
     text-decoration: none;
     color: $header-color;
@@ -90,6 +153,8 @@ body{
     text-align: center;
     margin: 2rem;
     background-color: $btn-background;
+    cursor: pointer;
+
     &:hover {
       background-color: $btn-background-hover;
     }
@@ -146,12 +211,15 @@ body{
     text-align: right;
   }
 }
+
 @media (max-width: 1050px) {
   .education {
     flex-direction: column;
+
     &__img {
       margin: 0 0 1rem;
     }
+
     &__school {
       text-align: center;
     }
@@ -173,10 +241,12 @@ body{
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.2s ease-in-out;
   cursor: pointer;
+
   &__image {
     width: 7rem;
     object-fit: contain;
   }
+
   &__name {
     margin-top: 0.5rem;
     font-size: 1.5rem;
@@ -184,6 +254,7 @@ body{
     text-align: center;
   }
 }
+
 .tech-card:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
