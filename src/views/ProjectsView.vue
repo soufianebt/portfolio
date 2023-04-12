@@ -25,65 +25,41 @@ export default {
     return {
       projectList: [
         {
-          name: 'Project 1',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
+          name: 'Dwirty',
+          description: 'Dwerty location est un espace pour les résidents marocains et non marocains ainsi que pour les touristes dans lequel ils peuvent chercher et trouver un bon logement qui répond à leurs attentes',
+          url: 'https://github.com/soufianebt/Dwerty-Location',
+          imageUrl: 'images/Projects/Dwirty.png',
         },
         {
-          name: 'Project 2',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
+          name: 'My Coiffeur',
+          description: 'My Coiffeur',
+          url: 'https://github.com/soufianebt/MyCoiffeur',
+          imageUrl: 'images/Projects/MyCoiffeur.png',
         },
         {
-          name: 'Project 3',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
+          name: 'KALAH',
+          description: 'kalah',
+          url: 'https://github.com/soufianebt/KALAH',
+          imageUrl: 'images/Projects/Kalah.png',
         },
         {
-          name: 'Project 4',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
+          name: 'dwirty Location mobile',
+          description: 'Dwerty location est un espace pour les résidents marocains et non marocains ainsi que pour les touristes dans lequel ils peuvent chercher et trouver un bon logement qui répond à leurs attentes',
+          url: 'https://github.com/soufianebt/DwertyLocation_app',
+          imageUrl: 'images/Projects/Dwirty.png',
         },
         {
-          name: 'Project 5',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
+          name: 'Litifli',
+          description: 'Litefli is a platform dedicated to medical centers and Moroccan citizens to manage vaccination appointments for babies.',
+          url: 'https://github.com/soufianebt/Litefli',
+          imageUrl: 'images/Projects/Litefli.png',
         },
         {
-          name: 'Project 6',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
-        },
-        {
-          name: 'Project 7',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
-        },
-        {
-          name: 'Project 8',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
-        },
-        {
-          name: 'Project 9',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
-        },
-        {
-          name: 'Project 10',
-          description: 'This is a project description',
-          url: 'https://www.google.com',
-          imageUrl: 'https://picsum.photos/300/200',
-        },
+          name: 'contactApp',
+          description: 'Contacte App It is a cross-platform application developed with Ionic, Cordova, Angular, fireBase technologies (As part of an academic project). Our application provides its users with a telephone contact management,',
+          url: 'https://github.com/soufianebt/contactApp',
+          imageUrl: 'images/Projects/ContactApp.png',
+        }
       ],
     };
   },
@@ -91,11 +67,5 @@ export default {
 </script>
 
 <style scoped>
-.project-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 20px;
-}
+
 </style>

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import Education from '../components/Education.vue'
+import Education from '../components/EducationCard.vue'
 
 export default {
   components: {
