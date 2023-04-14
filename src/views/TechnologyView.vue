@@ -1,6 +1,6 @@
 <template>
   <div class="technology-view">
-    <h1 class="technology-view__title">Technologies</h1>
+    <h1 class="technology-view__title"> <font-awesome-icon icon="microchip" /> Technologies</h1>
     <div class="technology-view__cards">
       <TechnologyCard
           v-for="tech in technologies"

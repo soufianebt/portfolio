@@ -1,7 +1,7 @@
 <template>
 
     <div class="education__container">
-        <h1 class="education__title">Education</h1>
+        <h1 class="education__title"><font-awesome-icon icon="school" /> Education</h1>
         <div class="education__container__card">
             <template v-for="education in educations" :key="education.id">
                 <Education

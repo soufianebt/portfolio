@@ -1,25 +1,38 @@
 <template>
-  <h1 class="heading"> <span>contact</span> me </h1>
-  <div class="row">
-    <div class="content">
-      <h3 class="title">contact info</h3>
-      <div class="info">
-        <h3> <i class=""></i> Soufianeboutahiri@gmail.com </h3>
-        <h3> <i class=""></i> +212 601-541327 </h3>
-        <h3> <i class=""></i> Rabat, Morocco - 12050. </h3>
-      </div>
+    <div class="contact-form">
+        <h1 class="contact-form__heading"> <span>contact</span> me </h1>
+        <div class="contact-form__column">
+            <div class="contact-form__content">
+                <div class="contact-form__info">
+                    <h3 class="contact-form__info-item">
+                        <font-awesome-icon icon="envelope" /> Soufianeboutahiri@gmail.com
+                    </h3>
+                    <h3 class="contact-form__info-item">
+                        <font-awesome-icon icon="phone" /> +212 601-541327
+                    </h3>
+                    <h3 class="contact-form__info-item">
+                        <font-awesome-icon icon="address-card" /> Rabat, Morocco - 12050.
+                    </h3>
+                </div>
+            </div>
+            <div class="contact-form__container">
+                <input type="text" v-model="name" class="contact-form__input contact-form__input--md8" placeholder="Name" >
+                <input type="email" v-model="email" class="contact-form__input contact-form__input--md8" placeholder="Email" >
+                <input type="text" v-model="raison" class="contact-form__input contact-form__input--md8" placeholder="Subject" >
+                <textarea name="" v-model="message" id="" cols="30" rows="10" class="contact-form__textarea" placeholder="Message"></textarea>
+                <button type="submit" v-on:click="sendEmail" class="contact-form__button"> Send <i class="fas fa-paper-plane"></i> </button>
+            </div>
+        </div>
     </div>
-    <div class="container align-content-center col-5" >
-      <input type="text" v-model="name" class="form-control mb-3 col-md-6" placeholder="name" >
-      <input type="email" v-model="email" class="form-control mb-3 col-md-6" placeholder="email" >
-      <input type="text" v-model="raison" class="form-control mb-3 col-md-6"  placeholder="Object" >
-      <textarea name="" v-model="message" id="" cols="30" rows="10" class="form-control mb-3 col-md-6" placeholder="message"></textarea>
-      <button type="submit" v-on:click="sendEmail" class="btn btn-primary mb-3 col-md-6"> send <i class="fas fa-paper-plane"></i> </button>
-    </div>
-  </div>
 </template>
 
+
+
+
+
 <script>
+import {send} from "@emailjs/browser";
+
 export default {
   name: "ContactsView",
   data() {
@@ -33,7 +46,7 @@ export default {
   methods: {
     sendEmail() {
       try {
-        emailjs.send('service_ce3bbxt', 'template_niz435g',{
+        send('service_ce3bbxt', 'template_niz435g',{
           from_name: this.name,
           raison: this.raison,
           message: this.message,

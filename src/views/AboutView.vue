@@ -1,6 +1,6 @@
 <template>
     <div class="about">
-        <h1>About Me</h1>
+        <h1><font-awesome-icon icon="lightbulb" /> About Me</h1>
         <ul>
             <li><span>Full Name :</span> Soufiane BOUTAHIRI</li>
             <li><span>Age :</span> 24</li>

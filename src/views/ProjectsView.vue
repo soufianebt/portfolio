@@ -1,6 +1,6 @@
 <template>
   <div class="projects-view">
-    <h1>Projects</h1>
+    <h1><font-awesome-icon icon="star" /> Projects</h1>
     <div class="project-list">
       <ProjectCard
           v-for="(project, index) in projectList"
