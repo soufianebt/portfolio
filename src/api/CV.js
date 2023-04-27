@@ -6,3 +6,4 @@ export function getFrenchCV() {
 export function getEnglishCV() {
     return axios.get('https://drive.google.com/uc?id=1hiOkFJnvzalR0-yI6IZyZXhd2OT-wl-p&export=download');
 }
+

@@ -1,5 +1,6 @@
 <script setup>
 import {RouterLink, RouterView} from 'vue-router'
+import SocialMedia from "@/components/SocialMedia.vue";
 </script>
 
 <template>
@@ -18,6 +19,7 @@ import {RouterLink, RouterView} from 'vue-router'
                     <RouterLink to="/projects">Projects</RouterLink>
                     <RouterLink to="/contacts">Contacts</RouterLink>
                 </nav>
+                <SocialMedia/>
             </section>
         </div>
         <div class="container">
