@@ -1,0 +1,10 @@
+@import "base";
+
+.who-i-am {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 10px;
+  color: $header-color;
+}
