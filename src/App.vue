@@ -8,7 +8,7 @@ import SocialMedia from "@/components/SocialMedia.vue";
         <div class="container left-side">
             <section class="main-container__left-side">
                 <div class="avatar-container">
-                    <img alt="Soufiane Boutahiri PhotoS" height="120" src="/soufianeBoutahiri.jpg" width="120">
+                    <img alt="Soufiane Boutahiri PhotoS"  src="/soufianeBoutahiri.jpg" >
                 </div>
                 <h1>Soufiane BOUTAHIRI</h1>
                 <nav>

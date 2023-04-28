@@ -7,7 +7,7 @@
             <font-awesome-icon :icon="['fab', 'linkedin']" />
         </a>
         <a href="https://www.credly.com/users/soufiane-boutahiri/badges" target="_blank">
-            <img src="credly.svg"/>
+            <img src="/credly.svg" alt="credly icon"/>
         </a>
 
     </div>

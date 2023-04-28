@@ -26,26 +26,24 @@ export default {
       projectList: [
         {
           name: 'Dwirty',
-          description: 'Dwerty location est un espace pour les résidents marocains et non marocains ainsi que pour les touristes dans lequel ils peuvent chercher et trouver un bon logement qui répond à leurs attentes',
-          url: 'https://github.com/soufianebt/Dwerty-Location',
+            description: 'Dwerty rental is a space for Moroccan and non-Moroccan residents as well as for tourists in which they can search and find a good accommodation that meets their expectations',          url: 'https://github.com/soufianebt/Dwerty-Location',
           imageUrl: 'images/Projects/Dwirty.png',
         },
         {
           name: 'My Coiffeur',
-          description: 'My Coiffeur',
+          description: 'My Coiffeur is a mobile application to manage appointments at local hairdressers, as well as a social media for the coifeur where they share their offers and haircuts.',
           url: 'https://github.com/soufianebt/MyCoiffeur',
           imageUrl: 'images/Projects/MyCoiffeur.png',
         },
         {
           name: 'KALAH',
-          description: 'kalah',
+          description: 'Kalah is a two-player strategy game played on a wooden board with two rows of six pits. The objective is to capture as many stones as possible from your opponent\'s side of the board. The game requires strategic planning and critical thinking and ends when one player no longer has any stones on their side of the board.',
           url: 'https://github.com/soufianebt/KALAH',
           imageUrl: 'images/Projects/Kalah.png',
         },
         {
           name: 'dwirty Location mobile',
-          description: 'Dwerty location est un espace pour les résidents marocains et non marocains ainsi que pour les touristes dans lequel ils peuvent chercher et trouver un bon logement qui répond à leurs attentes',
-          url: 'https://github.com/soufianebt/DwertyLocation_app',
+            description: 'Dwerty rental is a space for Moroccan and non-Moroccan residents as well as for tourists in which they can search and find a good accommodation that meets their expectations',          url: 'https://github.com/soufianebt/DwertyLocation_app',
           imageUrl: 'images/Projects/Dwirty.png',
         },
         {
