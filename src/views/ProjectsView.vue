@@ -57,6 +57,12 @@ export default {
           description: 'Contacte App It is a cross-platform application developed with Ionic, Cordova, Angular, fireBase technologies (As part of an academic project). Our application provides its users with a telephone contact management,',
           url: 'https://github.com/soufianebt/contactApp',
           imageUrl: 'images/Projects/ContactApp.png',
+        },
+        {
+          name: 'Syndic Management',
+          description: 'Syndic app',
+          url: 'https://github.com/soufianebt/contactApp',
+          imageUrl: 'images/Projects/ContactApp.png',
         }
       ],
     };
