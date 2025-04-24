@@ -34,13 +34,13 @@ jobs:
         run: npm run build
 
       - name: fix permissions
-        run: chmod -R a+rX ./_site
+        run: chmod -R a+rX ./dist
 
       - name: upload static site content
         uses: actions/upload-pages-artifact@v3
 
         with:
-          path: ./_site
+          path: ./dist
           name: github-pages
   deploy:
     environment:
