@@ -32,6 +32,10 @@ jobs:
 
       - name: Build the project
         run: npm run build
+    
+      - name: Clean symlinks (for GitHub Pages)
+        run: find dist -type l -exec rm {} +
+        
       - name: Upload dist folder
         uses: actions/upload-artifact@v4
         with:
@@ -55,5 +59,4 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
           artifact_name: github-pages
