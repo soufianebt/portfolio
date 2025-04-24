@@ -3,13 +3,18 @@ name: Deploy static content to GitHub Pages
 on:
   push:
     branches:
-      - v2 # ✅ make sure your main deployment branch is 'v2'
+      - v2
   workflow_dispatch:
 
 permissions:
   contents: read
   pages: write
   id-token: write
+
+# Required to use Pages
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
 
 jobs:
   build:
@@ -21,7 +26,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 22
+          node-version: 18 # ✅ Node 22 est trop récent et instable pour Vite 5.x/4.x
 
       - name: Install dependencies
         run: npm install
@@ -29,8 +34,8 @@ jobs:
       - name: Build the project
         run: npm run build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v2
         with:
           path: ./dist
 
