@@ -1,4 +1,4 @@
-@import "base";
+@use "base";
 
 .who-i-am {
   display: flex;
@@ -6,5 +6,5 @@
   align-items: center;
   flex-direction: column;
   margin: 0 10px;
-  color: $header-color;
+  color: base.$header-color;
 }

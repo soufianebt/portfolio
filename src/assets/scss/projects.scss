@@ -1,4 +1,4 @@
-@import "base";
+@use "base";
 .projects-view{
   h1 {
     text-align: center;
@@ -42,14 +42,14 @@
   }
   &__button{
       border: none;
-      background-color: $btn-background;
+      background-color: base.$btn-background;
       color: #fff;
       padding: 10px 20px;
       border-radius: 5px;
       cursor: pointer;
       transition: background-color 0.3s;
     &:hover {
-            background-color: $btn-background-hover;
+            background-color: base.$btn-background-hover;
         }
 
   }

@@ -1,4 +1,4 @@
-@import "base";
+@use "base";
 
 .social-media {
   display: flex;
@@ -7,10 +7,10 @@
   & a {
     margin: 0 10px;
     font-size: 2rem;
-    color: $header-color;
+    color: base.$header-color;
 
     & img{
-      color: $header-color;
+      color: base.$header-color;
       height: 2rem;
     }
   }

@@ -1,4 +1,5 @@
-@import 'base';
+@use "sass:color";
+@use 'base';
 
 .main-container {
   padding: 1rem;
@@ -6,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   font-weight: normal;
-  color: $header-color;
+  color: base.$header-color;
   transition: all 0.5s ease-in-out;
   overflow: hidden;
 
@@ -31,7 +32,7 @@
     & .avatar-container {
       width: 170px;
       height: 170px;
-      border: 3px solid lighten($background-color, 5%);
+      border: 3px solid color.adjust(base.$background-color, $lightness: 5%);
       border-radius: 50%;
       transition: all 0.5s ease-in-out;
       @media (min-width: 300px) {
@@ -80,13 +81,13 @@
         //margin: 5px;
         //padding: 0 4rem 0 4rem;
         text-decoration: none;
-        color: $header-color;
+        color: base.$header-color;
         font-size: 1.5rem;
         text-align: center;
-        background-color: $btn-background;
+        background-color: base.$btn-background;
 
         &:hover {
-          background-color: $btn-background-hover;
+          background-color: base.$btn-background-hover;
         }
       }
     }
