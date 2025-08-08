@@ -5,27 +5,6 @@
             Contact me
         </h1>
         <div class="contact-form__column">
-            <div class="contact-form__content">
-                <div class="contact-form__info">
-                    <h3 class="contact-form__info-item">
-                        <font-awesome-icon icon="envelope"/>
-                        <a class="contact-form__info-item__link" href="mailto:soufianeboutahiri@gmail.com"
-                           title="Send me an email">
-                            Soufianeboutahiri@gmail.com
-                        </a>
-                    </h3>
-                    <h3 class="contact-form__info-item">
-                        <font-awesome-icon icon="phone"/>
-                        <a class="contact-form__info-item__link" href="tel:+212601541327" title="Call me">
-                            +212 601-541327
-                        </a>
-                    </h3>
-                    <h3 class="contact-form__info-item">
-                        <font-awesome-icon icon="address-card"/>
-                        Rabat, Morocco - 12050.
-                    </h3>
-                </div>
-            </div>
             <div class="contact-form__container">
                 <input v-model="name" class="contact-form__input contact-form__input--md8" placeholder="Name"
                        type="text">

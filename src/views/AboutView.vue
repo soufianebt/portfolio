@@ -8,7 +8,6 @@
             <li><span>Post :</span> Full-Stack Engineer Dot Net/ Vue js</li>
             <li><span>Languages :</span> Arabic(Native), French(C1), English (C1)</li>
         </ul>
-        <button title="Click to download the Resume" @click="downloadFile">Download CV</button>
     </div>
 </template>
 <script>
