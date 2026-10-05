@@ -44,25 +44,28 @@
 
 .project-list {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1fr);
 }
 
 .project-card {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  border: 1px solid base.$border-color;
-  background: rgba(255, 255, 255, 0.48);
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  padding-block: 2rem;
+  border-top: 1px solid base.$border-color;
   animation: projects-reveal 550ms both;
 
   &:nth-child(2) { animation-delay: 60ms; }
   &:nth-child(3) { animation-delay: 120ms; }
 
+  &:last-child { border-bottom: 1px solid base.$border-color; }
+
   &__media {
     position: relative;
     overflow: hidden;
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
     background: #E4EAE5;
   }
 
@@ -77,21 +80,20 @@
   &:hover &__image { transform: scale(1.025); }
 
   &__number {
-    position: absolute;
-    top: 0.75rem;
-    left: 0.75rem;
-    padding: 0.3rem 0.45rem;
-    color: base.$header-color;
-    background: rgba(255, 255, 255, 0.9);
-    font-size: 0.72rem;
+    margin-bottom: 1rem;
+    color: base.$accent-color;
+    font-size: 0.78rem;
+
+    span {
+      margin-left: 0.65rem;
+      color: base.$muted-color;
+    }
   }
 
   &__content {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 1.2rem;
   }
 
   &__title {
@@ -130,5 +132,10 @@
 
 @media (max-width: 720px) {
   .projects-heading h1 { font-size: 3rem; }
-  .project-list { grid-template-columns: 1fr; }
+
+  .project-card {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+    padding-block: 1.5rem;
+  }
 }

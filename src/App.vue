@@ -27,9 +27,9 @@ const currentYear = new Date().getFullYear()
                     <RouterLink class="site-nav__link" to="/blog" active-class="site-nav__link--active">Blog</RouterLink>
                 </nav>
 
-                <RouterLink class="site-header__contact" to="/contacts">
+                <a class="site-header__contact" href="mailto:soufianeboutahiri@gmail.com">
                     Let's talk <span aria-hidden="true">↗</span>
-                </RouterLink>
+                </a>
             </div>
         </header>
 

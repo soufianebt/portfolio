@@ -1,15 +1,15 @@
 <template>
   <article class="project-card">
-    <div class="project-card__media">
-      <img class="project-card__image" :src="projectImageUrl" :alt="`${projectName} preview`" loading="lazy">
-      <span class="project-card__number">{{ projectNumber }}</span>
-    </div>
     <div class="project-card__content">
+      <p class="project-card__number">{{ projectNumber }} <span>Selected project</span></p>
       <h2 class="project-card__title">{{ projectName }}</h2>
       <p class="project-card__description">{{ projectDescription }}</p>
       <a class="project-card__link" :href="projectUrl" target="_blank" rel="noopener noreferrer">
         Explore project <span aria-hidden="true">↗</span>
       </a>
+    </div>
+    <div class="project-card__media">
+      <img class="project-card__image" :src="projectImageUrl" :alt="`${projectName} preview`" loading="lazy">
     </div>
   </article>
 </template>

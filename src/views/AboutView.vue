@@ -32,7 +32,7 @@ const publicBase = import.meta.env.BASE_URL
           <RouterLink class="about-link about-link--primary" to="/projects">
             See what I build <span aria-hidden="true">↗</span>
           </RouterLink>
-          <RouterLink class="about-link about-link--quiet" to="/contacts">Get in touch</RouterLink>
+          <a class="about-link about-link--quiet" href="mailto:soufianeboutahiri@gmail.com">Get in touch</a>
         </div>
       </div>
 
