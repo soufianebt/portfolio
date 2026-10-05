@@ -1,84 +1,121 @@
-@use "sass:meta";
 @use 'base';
 
-.education {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  border: #282828 1px solid;
-  margin: 1rem;
+.education-page {
+  display: grid;
+  gap: clamp(3rem, 7vw, 6rem);
+}
 
-  &__container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
+.education-heading {
+  max-width: 48rem;
+  animation: education-reveal 600ms 80ms both;
+
+  &__eyebrow {
+    margin-bottom: 0.8rem;
+    color: base.$accent-color;
+    font-size: 0.8rem;
   }
 
-  &__title {
-    //align-self: start;
-    font-size: 2rem;
+  h1 {
+    max-width: 12ch;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3.8rem;
+    line-height: 1.05;
+    font-weight: 400;
+
+    em { color: base.$accent-color; font-weight: 400; }
   }
 
-  &__img {
-    width: 12rem;
-    height: 10rem;
-    margin: 2rem;
-  }
-
-  @include meta.load-css('base');
-
-
-  &__info {
-    list-style-type: none;
-    padding: 0;
-    margin-right: 1rem;
-    align-items: center;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-  }
-
-  &__school {
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-align: center;
-    word-break: keep-all;
-  }
-
-  &__location {
-    font-style: italic;
-    text-align: center;
-  }
-
-  &__field {
-    text-align: center;
-  }
-
-  &__date {
-    padding: 0;
-    margin-right: 1rem;
-    word-break: keep-all;
-    text-align: right;
+  &__summary {
+    max-width: 38rem;
+    margin-top: 1rem;
+    color: base.$muted-color;
+    line-height: 1.8;
   }
 }
 
-@media (max-width: 1050px) {
-  .education {
-    flex-direction: column;
+.education-timeline {
+  max-width: 58rem;
+  position: relative;
+  display: grid;
+  margin-left: 0.35rem;
+  padding-left: 1.7rem;
+  border-left: 1px solid base.$border-color;
+}
 
-    &__img {
-      margin: 0 0 1rem;
-    }
+.education-entry {
+  min-height: 10rem;
+  position: relative;
+  display: grid;
+  grid-template-columns: 5rem minmax(0, 1fr);
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.4rem 0 1.7rem;
+  border-bottom: 1px solid base.$border-color;
+  animation: education-reveal 550ms both;
 
-    &__school {
-      text-align: center;
-    }
+  &:first-child { padding-top: 0.3rem; }
+  &:nth-child(2) { animation-delay: 120ms; }
+  &:nth-child(3) { animation-delay: 220ms; }
 
-    &__location {
-      text-align: center;
-    }
+  &__marker {
+    width: 0.65rem;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 2rem;
+    left: -2.05rem;
+    border: 2px solid base.$background-color;
+    border-radius: 50%;
+    background: base.$accent-color;
+    box-shadow: 0 0 0 1px base.$accent-color;
+  }
+
+  &__logo {
+    width: 5rem;
+    height: 5rem;
+    padding: 0.55rem;
+    object-fit: contain;
+    background: base.$surface-color;
+    border: 1px solid base.$border-color;
+  }
+
+  &__date {
+    margin-bottom: 0.35rem;
+    color: base.$accent-color;
+    font-size: 0.78rem;
+  }
+
+  &__school {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.45rem;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+
+  &__field {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+  }
+
+  &__location {
+    margin-top: 0.35rem;
+    color: base.$muted-color;
+    font-size: 0.8rem;
+  }
+}
+
+@keyframes education-reveal {
+  from { opacity: 0; transform: translateY(0.7rem); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .education-heading h1 { font-size: 3rem; }
+
+  .education-entry {
+    grid-template-columns: 3.5rem minmax(0, 1fr);
+    gap: 1rem;
+
+    &__logo { width: 3.5rem; height: 3.5rem; }
+    &__school { font-size: 1.2rem; }
   }
 }

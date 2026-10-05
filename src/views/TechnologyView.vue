@@ -1,116 +1,71 @@
-<template>
-    <div class="technology-view">
-        <h1 class="technology-view__title">
-            <font-awesome-icon icon="microchip"/>
-            Technologies
-        </h1>
-        <div class="technology-view__cards">
-            <TechnologyCard
-                    v-for="tech in technologies"
-                    :key="tech.id"
-                    :image="tech.image"
-                    :name="tech.name"
-            />
-        </div>
-    </div>
-</template>
+<script setup>
+import TechnologyCard from '@/components/TechnologyCard.vue'
 
-<script>
-import TechnologyCard from "@/components/TechnologyCard.vue";
-
-export default {
-    components: {
-        TechnologyCard,
+const groups = [
+    {
+        id: 'application',
+        title: 'Web & mobile',
+        description: 'Interfaces and applications across devices.',
+        technologies: [
+            { name: 'Vue.js', image: 'images/Technologies/Vujs.svg' },
+            { name: 'Angular', image: 'images/Technologies/angular-icon.svg' },
+            { name: 'Android', image: 'images/Technologies/Android.svg' },
+            { name: 'Ionic', image: 'images/Technologies/Ionic.svg' },
+        ],
     },
-    data() {
-        return {
-            technologies: [
-                {
-                    id: 1,
-                    name: "Vue.js",
-                    image: "images/Technologies/Vujs.svg",
-                },
-                {
-                    id: 4,
-                    name: "C#",
-                    image: "images/Technologies/C.svg",
-                },
-                {
-                    id: 11,
-                    name: "Sql server",
-                    image: "images/Technologies/mssql.png",
-                },
-                {
-                    id: 2,
-                    name: "Android",
-                    image: "images/Technologies/Android.svg",
-                },
-                {
-                    id: 3,
-                    name: "angular",
-                    image: "images/Technologies/angular-icon.svg",
-                },
-
-                {
-                    id: 5,
-                    name: "Git",
-                    image: "images/Technologies/Git.svg",
-                },
-                {
-                    id: 6,
-                    name: "Ionic",
-                    image: "images/Technologies/Ionic.svg",
-                },
-                {
-                    id: 7,
-                    name: "Java",
-                    image: "images/Technologies/Java.svg",
-                },
-                {
-                    id: 8,
-                    name: "Linux",
-                    image: "images/Technologies/Linux.svg",
-                },
-                {
-                    id: 9,
-                    name: "Node.js",
-                    image: "images/Technologies/Nodejs.svg",
-                },
-                {
-                    id: 10,
-                    name: "Spring",
-                    image: "images/Technologies/Spring.svg",
-                }
-            ]
-        };
+    {
+        id: 'backend',
+        title: 'Backend & data',
+        description: 'Languages, runtime, frameworks, and databases.',
+        technologies: [
+            { name: 'C#', image: 'images/Technologies/C.svg' },
+            { name: 'SQL Server', image: 'images/Technologies/mssql.png' },
+            { name: 'Java', image: 'images/Technologies/Java.svg' },
+            { name: 'Spring', image: 'images/Technologies/Spring.svg' },
+            { name: 'Node.js', image: 'images/Technologies/Nodejs.svg' },
+        ],
     },
-};
+    {
+        id: 'tooling',
+        title: 'Tools & platforms',
+        description: 'Everyday tools for development and delivery.',
+        technologies: [
+            { name: 'Git', image: 'images/Technologies/Git.svg' },
+            { name: 'Linux', image: 'images/Technologies/Linux.svg' },
+        ],
+    },
+]
 </script>
 
-<style scoped>
-.technology-view {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
+<template>
+    <section class="technology-view" aria-labelledby="technology-title">
+        <header class="technology-heading">
+            <p class="technology-heading__eyebrow">The toolkit</p>
+            <h1 id="technology-title">Tools for building <em>useful things.</em></h1>
+            <p class="technology-heading__summary">
+                A practical mix of web, mobile, backend, and platform technologies gathered through work and learning.
+            </p>
+        </header>
 
-.technology-view__title {
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-}
-
-.technology-view__cards {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-@media (max-width: 600px) {
-    .technology-view__cards {
-        gap: 1rem;
-    }
-}
-</style>
+        <div class="technology-groups">
+            <section v-for="(group, index) in groups" :key="group.id" class="technology-group">
+                <header class="technology-group__heading">
+                    <span class="technology-group__number">0{{ index + 1 }}</span>
+                    <div>
+                        <h2>{{ group.title }}</h2>
+                        <p>{{ group.description }}</p>
+                    </div>
+                    <span class="technology-group__count">{{ group.technologies.length }} tools</span>
+                </header>
+                <div class="technology-grid">
+                    <TechnologyCard
+                        v-for="technology in group.technologies"
+                        :key="technology.name"
+                        :image="technology.image"
+                        :name="technology.name"
+                    />
+                </div>
+            </section>
+        </div>
+    </section>
+</template>
