@@ -1,8 +1,12 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import WhoAmIView from '../views/WhoAmIView.vue'
 
+const routerBase = window.location.pathname.startsWith('/portfolio/')
+  ? '/portfolio/'
+  : '/'
+
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(routerBase),
   routes: [
     {
       path: '/',

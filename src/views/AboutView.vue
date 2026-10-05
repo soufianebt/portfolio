@@ -15,6 +15,7 @@ function calculateAge() {
 }
 
 const age = calculateAge()
+const publicBase = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -36,7 +37,7 @@ const age = calculateAge()
       </div>
 
       <figure class="about-portrait">
-        <img src="/soufianeBoutahiri.jpg" alt="Soufiane Boutahiri, software developer">
+        <img :src="`${publicBase}soufianeBoutahiri.jpg`" alt="Soufiane Boutahiri, software developer">
         <figcaption><span>Soufiane Boutahiri</span><span>Engineer · lifelong learner</span></figcaption>
       </figure>
     </header>

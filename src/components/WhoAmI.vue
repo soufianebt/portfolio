@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router'
 import blogPosts from '../data/blogPosts.js'
 
 const featuredPosts = blogPosts.slice(0, 2)
+const publicBase = import.meta.env.BASE_URL
 </script>
 
 <template>
@@ -28,7 +29,7 @@ const featuredPosts = blogPosts.slice(0, 2)
                 <div class="home-hero__portrait-frame">
                     <img
                         class="home-hero__portrait"
-                        src="/soufianeBoutahiri.jpg"
+                        :src="`${publicBase}soufianeBoutahiri.jpg`"
                         alt="Soufiane Boutahiri"
                     >
                     <span class="home-hero__portrait-label">The person behind the code</span>
