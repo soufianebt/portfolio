@@ -46,7 +46,6 @@ const publicBase = import.meta.env.BASE_URL
     <span class="home-code__keyword">public string</span> Principle =&gt; <span class="home-code__string">"Keep it clear"</span>;
 }</code></pre>
                 </div>
-                <span class="home-hero__index" aria-hidden="true">01 / 04</span>
             </div>
         </section>
 
