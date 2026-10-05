@@ -7,6 +7,8 @@
 @use 'contacts';
 @use "socialmedias";
 @use "whoiam";
+@use "site";
+@use "blog";
 
 body {
   background-color: base.$background-color;

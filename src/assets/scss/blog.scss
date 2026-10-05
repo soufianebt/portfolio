@@ -1,0 +1,141 @@
+@use 'base';
+
+.blog-view {
+  max-width: 58rem;
+  margin-inline: auto;
+
+  &__intro {
+    max-width: 48rem;
+    padding-block: 1rem 3.5rem;
+
+    h1 {
+      max-width: 12ch;
+      font-family: Georgia, 'Times New Roman', serif;
+      font-size: 4rem;
+      line-height: 1.05;
+      font-weight: 400;
+
+      em { color: base.$accent-color; font-weight: 400; }
+    }
+
+    > p:last-child {
+      max-width: 40rem;
+      margin-top: 1.2rem;
+      color: base.$muted-color;
+      font-size: 1.05rem;
+    }
+  }
+
+  &__eyebrow,
+  .blog-article__eyebrow {
+    margin-bottom: 0.8rem;
+    color: base.$accent-color;
+    font-size: 0.8rem;
+  }
+}
+
+.blog-entry {
+  display: grid;
+  grid-template-columns: 4rem minmax(0, 1fr);
+  gap: 1.5rem;
+  padding-block: 1.8rem;
+  border-top: 1px solid base.$border-color;
+
+  &__number {
+    padding-top: 0.15rem;
+    color: base.$accent-color;
+    font-family: Georgia, serif;
+    font-size: 1.2rem;
+  }
+
+  &__category {
+    color: base.$muted-color;
+    font-size: 0.78rem;
+  }
+
+  h2 {
+    margin-top: 0.35rem;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+
+    a { text-decoration: none; }
+    a:hover { color: base.$accent-color; }
+  }
+
+  &__excerpt {
+    margin-top: 0.35rem;
+    color: base.$muted-color;
+  }
+
+  &__read {
+    display: inline-flex;
+    gap: 0.65rem;
+    margin-top: 0.9rem;
+    color: base.$btn-background;
+    text-decoration: none;
+    font-size: 0.88rem;
+
+    &:hover { color: base.$accent-color; }
+  }
+}
+
+.blog-article {
+  max-width: 48rem;
+  margin-inline: auto;
+
+  &__back {
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    color: base.$btn-background;
+    text-decoration: none;
+    font-size: 0.88rem;
+
+    &:hover { color: base.$accent-color; }
+
+    &--bottom {
+      margin-top: 2.5rem;
+      margin-bottom: 0;
+    }
+  }
+
+  &__eyebrow {
+    color: base.$accent-color;
+    font-size: 0.8rem;
+  }
+
+  &__title {
+    max-width: 17ch;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3.5rem;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+
+  &__dek {
+    margin-top: 1rem;
+    color: base.$muted-color;
+    font-size: 1.15rem;
+  }
+
+  &__body {
+    display: grid;
+    gap: 1.3rem;
+    margin-top: 2.3rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+  }
+}
+
+@media (max-width: 620px) {
+  .blog-view__intro h1 { font-size: 3rem; }
+
+  .blog-entry {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    gap: 0.8rem;
+
+    h2 { font-size: 1.55rem; }
+  }
+
+  .blog-article__title { font-size: 2.7rem; }
+}
